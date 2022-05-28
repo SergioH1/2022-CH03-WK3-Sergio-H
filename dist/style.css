@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Grape+Nuts&display=swap');
-/* font-family: 'Cabin Sketch', cursive; */
 
 * {
     margin: 0;
@@ -13,6 +12,7 @@ body {
 }
 
 .container-header__title {
+    font-family: 'Cabin Sketch', cursive;
     background-color: rgb(187, 70, 49);
     padding: 20px;
     position: fixed;

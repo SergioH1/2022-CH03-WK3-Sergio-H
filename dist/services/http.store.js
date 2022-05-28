@@ -1,12 +1,11 @@
 export class HttpStoreClass {
     url;
-    constructor() {
-        this.url = 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=0';
+    constructor(url) {
+        this.url = url;
     }
-    getPokemon() {
-        // GET
-        fetch(this.url)
-            .then((response) => response.json())
-            .then((json) => console.log(json));
+    getPokemon(pokemonID) {
+        return fetch(this.url + pokemonID).then((response) => {
+            return response.json();
+        });
     }
 }
