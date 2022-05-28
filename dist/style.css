@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Grape+Nuts&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,41 +6,38 @@
 }
 
 body {
-    background-color: #ececec;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.container-header__title {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Press Start 2P', cursive;
     background-color: rgb(187, 70, 49);
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: white;
 }
-
-#container {
-    width: min(100%, 1000px);
-    margin: 100px auto;
+.container-header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.card {
-    width: 230px;
-    margin-top: 100px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 20px;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+.container-header__title {
+    color: rgb(0, 0, 0);
+}
+.container.main {
+    display: flex;
 }
 
-.card img {
-    width: 100%;
+.container-list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
-
-.card span {
-    color: #6e6e6e;
-    font-weight: 500;
+li {
+    list-style: none;
+}
+.card {
+    height: 270px;
+    align-self: center;
+}
+.line-pokeball {
+    background-color: black;
+    height: 10px;
 }

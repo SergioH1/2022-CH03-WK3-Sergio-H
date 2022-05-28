@@ -10,31 +10,35 @@ export class PokeCard extends Component {
         this.addRender(selector);
     }
     createCard() {
-        let html = `  
+        return `  
         <li>        
-            <ul>
+            <ul class="no-container">
                 <li>
 
-                    <img src="${this.pokemon.sprites.front_default}" alt="" />
+                    <img class = "card"src="${
+                        this.pokemon.sprites.front_default
+                    }" alt="" />
                 </li>
-                <li><h2${this.pokemon.name}</h2></li>
-                <li>${this.pokemon.weight}</li>
-                <li>${this.pokemon.height}</li>
-                <li>`;
-        html += `
-                    <ul>
-                        <li>${this.pokemon.types[0].type.name}</li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>`;
-        html += `
-                     <li${this.pokemon.abilities[0]}</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+              
+                <li><h2>${this.pokemon.name.toUpperCase()}</h2></li>
+                   <li>nº${this.pokemon.id}/898</li>
+                <li>Peso: ${this.pokemon.weight / 10}kg</li>
+                <li>Altura ${this.pokemon.height * 10}cm</li>
+                <li>Tipo ${this.pokemon.types[0].type.name}</li>
+             <ul>
         `;
-        return html;
     }
+
+    //     html += `</ul>
+    //             </li><li>
+    //                     <ul>`;
+    //         html += `
+    //                      <li${this.pokemon.abilities[0]}</li>
+    //                      `;
+    //         html += `</ul>
+    //                 </li>
+    //             </ul>
+
+    //         </li>
+    // `;
 }

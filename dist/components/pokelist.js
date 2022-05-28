@@ -9,12 +9,16 @@ export class PokeList extends Component {
         this.pokeArray = pokeArray;
         this.template = this.createList();
         this.render(selector);
-        pokeArray.forEach((pokemon) => new PokeCard(pokemon, 'ul.list'));
+        pokeArray.forEach((pokemon) => new PokeCard(pokemon, 'ul.container-list'));
     }
     createList() {
         let html = ` 
-        <ul class="list">
-        </ul>`;
+      <ul class="container-list"></ul>`;
+        html += `
+       <footer>
+            <i role = "button" class="button-previus">⏪</i>
+            <i role = "button" class="button-next">⏩</i> 
+        </footer>;`;
         return html;
     }
 }
