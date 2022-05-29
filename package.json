@@ -15,6 +15,7 @@
         "singleQuote": true
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "cors": "^2.8.5",
         "json-server": "^0.16.3"
     },
@@ -54,4 +55,3 @@
     "homepage": "https://github.com/alce65/06-web-ts#readme",
     "description": ""
 }
-

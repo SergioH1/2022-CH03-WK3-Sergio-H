@@ -15,10 +15,7 @@ export class PokeList extends Component {
         let html = ` 
       <ul class="container-list"></ul>`;
         html += `
-       <footer>
-            <i role = "button" class="button-previus">⏪</i>
-            <i role = "button" class="button-next">⏩</i> 
-        </footer>;`;
+     `;
         return html;
     }
 }

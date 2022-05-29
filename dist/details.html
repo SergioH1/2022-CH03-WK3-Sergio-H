@@ -4,9 +4,36 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="prueba.css" />
         <script src="components/" type="module"></script>
         <title>Poke Api</title>
     </head>
-    <body></body>
+    <body>
+        <article class="card">
+            <img src="" alt="" />
+            <div class="card__body"></div>
+            <img
+                class="card__body--img"
+                src="${
+                        this.pokemon.sprites.front_default
+                    }"
+                alt=""
+            />
+            <h2 class="card__body--title">
+                ${this.pokemon.name.toUpperCase()}
+            </h2>
+            <p class="card__body--text">nº${this.pokemon.id}/898</p>
+            <div class="card-footer">
+                <p class="card-footer__text">
+                    Peso: ${this.pokemon.weight / 10}kg
+                </p>
+                <p class="card-footer__text">
+                    Altura ${this.pokemon.height * 10}cm
+                </p>
+                <p class="card-footer__text">
+                    Tipo ${this.pokemon.types[0].type.name}
+                </p>
+            </div>
+        </article>
+    </body>
 </html>
