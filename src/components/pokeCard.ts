@@ -18,8 +18,9 @@ export class PokeCard extends Component {
                 src="${this.pokemon.sprites.front_default}"
                 alt=""
             />
+            <a class = "Icon-fav" href="">⭐</a>
             <h2 class="card__body--title">
-                ${this.pokemon.name.toUpperCase()}
+                ${this.pokemon.name.toUpperCase()} 
             </h2>
             <p class="card__body--text">nº${this.pokemon.id}/898</p>
         
@@ -39,18 +40,3 @@ export class PokeCard extends Component {
         `;
     }
 }
-// <li class = "item">
-//             <ul class="item__container">
-//                 <li>
-
-//                     <img class = "card"src="${
-//                         this.pokemon.sprites.front_default
-//                     }" alt="" />
-//                 </li>
-
-//                 <li class = "item"><h2>${this.pokemon.name.toUpperCase()}</h2></li>
-//                 <li>nº${this.pokemon.id}/898</li>
-//                 <li>Peso: ${this.pokemon.weight / 10}kg</li>
-//                 <li>Altura ${this.pokemon.height * 10}cm</li>
-//                 <li>Tipo ${this.pokemon.types[0].type.name}</li>
-//             <ul>

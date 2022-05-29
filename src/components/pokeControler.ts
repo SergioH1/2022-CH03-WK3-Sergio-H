@@ -10,7 +10,7 @@ export class PokeControler {
         );
         const promises: Array<Promise<iPokemon>> = [];
         this.pokeIndex = 1;
-        for (let i = this.pokeIndex; i < this.pokeIndex + 9; i++) {
+        for (let i = this.pokeIndex; i < this.pokeIndex + 15; i++) {
             promises.push(pokeApi.getPokemon(i));
         }
         Promise.all(promises).then((pokemon) => {
@@ -29,22 +29,12 @@ export class PokeControler {
 
     private handlerButton(ev: Event) {
         if ((<HTMLElement>ev.target).className === 'button-next') {
-            this.pokeIndex += 9;
-            window.scroll({
-                top: 0,
-                left: 0,
-                behavior: 'auto',
-            });
+            this.pokeIndex += 15;
         } else if (
             (<HTMLElement>ev.target).className === 'button-previus' &&
-            this.pokeIndex >= 10
+            this.pokeIndex >= 16
         ) {
-            this.pokeIndex -= 9;
-            window.scroll({
-                top: 0,
-                left: 0,
-                behavior: 'auto',
-            });
+            this.pokeIndex -= 15;
         }
 
         this.updateComponent();
@@ -55,7 +45,7 @@ export class PokeControler {
             'https://pokeapi.co/api/v2/pokemon/'
         );
         const promises: Array<Promise<iPokemon>> = [];
-        for (let i = this.pokeIndex; i < this.pokeIndex + 9; i++) {
+        for (let i = this.pokeIndex; i < this.pokeIndex + 15; i++) {
             promises.push(pokeApi.getPokemon(i));
         }
         Promise.all(promises).then((pokemon) => {
